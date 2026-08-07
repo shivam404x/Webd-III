@@ -11,8 +11,12 @@
 // const user = os.userInfo();
 // console.log(user);
 
-const des = require('./data/des');
-console.log(des);
+// const des = require('./data/des');
+// console.log(des);
 
-const package = require('./data/package');
-console.log(package);   
+// const package = require('./data/package');
+// console.log(package);   
+
+require('dotenv').config()
+const process = require('process');
+console.log(process.env.PORT);
