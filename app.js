@@ -1,7 +1,7 @@
 // const fs = require('fs');
 // const data = fs.readFileSync('notes.txt', 'utf-8');
 // console.log(data);
-// fs.writeFileSync('notes.txt', 'This is Priyanshu babu');
+// fs.writeFileSync('notes.txt', 'This is Shivam babu');
 
 // const path = require('path');
 // const filepath = path.join(__dirname,'test', 'hello.txt');
@@ -11,8 +11,8 @@
 // const user = os.userInfo();
 // console.log(user);
 
-// const des = require('./data/des');
-// console.log(des);
+const des = require('./data/des');
+console.log(des);
 
-// const package = require('./data/package');
-// console.log(package);   
+const package = require('./data/package');
+console.log(package);   
