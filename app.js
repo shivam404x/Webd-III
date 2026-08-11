@@ -18,5 +18,19 @@
 // console.log(package);   
 
 require('dotenv').config()
+const http = require('http')
 const process = require('process');
-console.log(process.env.PORT);
+const port = process.env.PORT || 3000;
+// console.log(process.env.PORT);
+
+const server = http.createServer((req, res) => {
+    ;
+    res.writeHead(200, { 'content-Type': 'text/html' });
+    res.write('<h1>Hello  world</h1>');
+    res.write('<p>Hello  world</p>');
+    res.end();
+});
+
+server.listen(port, () => {
+    console.log(`server is running on port ${port}`);
+});
