@@ -15,6 +15,7 @@
 // console.log(des);
 
 // const package = require('./data/package');
+<<<<<<< HEAD
 // console.log(package);   
 
 require('dotenv').config()
@@ -34,3 +35,63 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
     console.log(`server is running on port ${port}`);
 });
+=======
+// console.log(package);  
+
+const students = [
+  { id: 1, name: "Shivam", age: 20 },
+  { id: 2, name: "Piryanshu", age: 20 },
+  { id: 3, name: "Satyam", age: 20 }
+];
+
+const http = require('http');
+require('dotenv').config();
+
+const process = require('process');
+const port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+
+  if (req.method === 'GET' && req.url === '/api/students') {
+
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    });
+
+    res.end(
+      JSON.stringify({
+        count: students.length,
+        students
+      })
+    );
+
+  } else if (req.method === 'GET' && req.url === '/api/students/count') {
+
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    });
+
+    res.end(
+      JSON.stringify({
+        count: students.length
+      })
+    );
+
+  } else {
+
+    res.writeHead(404, {
+      'Content-Type': 'application/json'
+    });
+
+    res.end(
+      JSON.stringify({
+        error: "Route not found"
+      })
+    );
+  }
+});
+
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+>>>>>>> 0b28193 (Add Node.js student API)
