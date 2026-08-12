@@ -15,7 +15,7 @@
 // console.log(des);
 
 // const package = require('./data/package');
-<<<<<<< HEAD
+
 // console.log(package);   
 
 require('dotenv').config()
@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
     console.log(`server is running on port ${port}`);
 });
-=======
+
 // console.log(package);  
 
 const students = [
@@ -94,4 +94,4 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
->>>>>>> 0b28193 (Add Node.js student API)
+
