@@ -4,8 +4,8 @@ const app = express();
 const packages = require("./data/tour.js");
 
 // const user = [{
-//   "name": "Babu",
-//   "age": 25,
+//   "name": "Shivam",
+//   "age": 21,
 // },
 // {
 //   "name": "John",
